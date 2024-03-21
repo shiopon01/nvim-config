@@ -8,10 +8,15 @@ vim.opt.clipboard = unnamed -- yank した文字列をクリップボードに�
 vim.opt.hls = true -- 検索した文字をハイライトする
 vim.opt.clipboard:append { 'unnamedplus' }
 
-require "plugins"
+vim.g.mapleader = ' '
 
 vim.g['cheatsheet#cheat_file'] = '~/.config/nvim/cheetsheet.md'
 vim.g['cheatsheet#float_window'] = 1
 vim.g['cheatsheet#float_window_width_ratioi'] = 0.6
 vim.g['cheatsheet#float_window_height_ratioi'] = 0.6
+
+require "plugins"
+require "nvim-tree-setting"
+require "lsp-setting"
+require "colorscheme-setting"
 
