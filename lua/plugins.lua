@@ -10,5 +10,9 @@ vim.cmd([[
 return require('packer').startup(function(use)
 	use "reireias/vim-cheatsheet"
   use "vim-jp/vimdoc-ja"
+  use {
+    'neoclide/coc.nvim',
+    branch = "release"
+  }
 end)
 

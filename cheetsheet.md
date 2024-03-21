@@ -140,4 +140,6 @@ v
 
 # 挿入モード
 
-k
+# Terminal mode
+- C-\ C-n: 脱出
+
