@@ -4,7 +4,7 @@ require('mason-lspconfig').setup_handlers({ function(server)
     -- -- Function executed when the LSP server startup
     -- on_attach = function(client, bufnr)
     --   local opts = { noremap=true, silent=true }
-    --   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+
     --   vim.cmd 'autocmd BufWritePre * lua vim.lsp.buf.formatting_sync(nil, 1000)'
     -- end,
     capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -76,4 +76,25 @@ cmp.setup({
 --     { name = "cmdline" },
 --   },
 -- })
+
+
+-- 4. formatter setting
+require('mason-null-ls').setup({
+  -- ensure_installed = { 'prettierd', 'rubocop', 'black', 'goimports' },
+  handlers = {},
+})
+
+local status, null_ls = pcall(require, 'null-ls')
+if (not status) then return end
+
+null_ls.setup({
+    sources = {
+        null_ls.builtins.formatting.prettierd,
+        null_ls.builtins.formatting.black,
+        null_ls.builtins.formatting.goimports,
+    },
+    debug = false,
+})
+
+vim.keymap.set('n', '<leader>p', function() vim.lsp.buf.format { async = true } end)
 

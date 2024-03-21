@@ -8,13 +8,17 @@ vim.cmd [[packadd packer.nvim]]
 --  ]])
 
 return require('packer').startup(function(use)
-	use "reireias/vim-cheatsheet"
+  use 'wbthomason/packer.nvim'
+
+  use "reireias/vim-cheatsheet"
   use "vim-jp/vimdoc-ja"
   use "Shatur/neovim-ayu"
 
   use "neovim/nvim-lspconfig"
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
+  use "nvimtools/none-ls.nvim"
+  use "jay-babu/mason-null-ls.nvim"
 
 
   use "hrsh7th/nvim-cmp"
