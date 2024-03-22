@@ -19,10 +19,10 @@ vim.g['cheatsheet#float_window_width_ratioi'] = 0.6
 vim.g['cheatsheet#float_window_height_ratioi'] = 0.6
 
 -- Plugin Settings
-require "plugins"
-require("lua/nvim-tree-setting")
-require("lua/lsp-setting")
-require("lua/colorscheme-setting")
+require("plugins")
+require("nvim-tree-setting")
+require("lsp-setting")
+require("colorscheme-setting")
 
 vim.api.nvim_set_keymap('n', '<leader>t', ':ToggleTerm<CR>', {silent=true})
 

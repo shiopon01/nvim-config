@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/Users/shiopon01/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/shiopon01/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -159,6 +164,11 @@ _G.packer_plugins = {
     path = "/Users/shiopon01/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["packer.nvim"] = {
+    loaded = true,
+    path = "/Users/shiopon01/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/Users/shiopon01/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -179,6 +189,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/shiopon01/.local/share/nvim/site/pack/packer/start/vim-cheatsheet",
     url = "https://github.com/reireias/vim-cheatsheet"
+  },
+  ["vim-closer"] = {
+    loaded = true,
+    path = "/Users/shiopon01/.local/share/nvim/site/pack/packer/start/vim-closer",
+    url = "https://github.com/rstacruz/vim-closer"
   },
   ["vim-vsnip"] = {
     loaded = true,
